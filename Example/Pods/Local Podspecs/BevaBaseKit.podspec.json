@@ -1,22 +1,35 @@
 {
   "name": "BevaBaseKit",
   "version": "0.1.0",
-  "summary": "A short description of BevaBaseKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/673729631@qq.com/BevaBaseKit",
+  "summary": "贝瓦基础开发库",
+  "description": "这是贝瓦的基础开发库",
+  "homepage": "https://github.com/kevin930119/BevaBaseKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "673729631@qq.com": "673729631@qq.com"
+    "kevin": "673729631@qq.com"
   },
   "source": {
-    "git": "https://github.com/673729631@qq.com/BevaBaseKit.git",
+    "git": "https://github.com/kevin930119/BevaBaseKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "BevaBaseKit/Classes/**/*"
+  "frameworks": [
+    "UIKit",
+    "AdSupport"
+  ],
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "SDWebImage": [
+
+    ]
+  },
+  "source_files": "BevaBaseKit/Classes/**/*",
+  "public_header_files": "Pod/Classes/**/*.h"
 }

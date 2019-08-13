@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A48D481D1FC20766B6BED36 /* Pods_BevaBaseKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86259DF5CB984A64F669D710 /* Pods_BevaBaseKit_Example.framework */; };
+		5496EBF5F275146B3B38978F /* libPods-BevaBaseKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DB30BE9199D19DCC7FBCB /* libPods-BevaBaseKit_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* PKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* PKAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* PKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PKViewController.m */; };
+		6003F5A7195388D20070C39A /* PKOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PKOneViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -23,7 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		E69ABD5A28462B940596C617 /* Pods_BevaBaseKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461E3A4E775DA5443499217C /* Pods_BevaBaseKit_Tests.framework */; };
+		FCD4F3B361FF194324D3ABC7 /* libPods-BevaBaseKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0AEDA7AE3CD22A50A1104 /* libPods-BevaBaseKit_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2542684EB06A5774050F89F7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		18D0AEDA7AE3CD22A50A1104 /* libPods-BevaBaseKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BevaBaseKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2542684EB06A5774050F89F7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		25FCD1CE43C3E6C31AD7C7B5 /* Pods-BevaBaseKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BevaBaseKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-BevaBaseKit_Example/Pods-BevaBaseKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3D4617F47D2A61C1B3C314FA /* Pods-BevaBaseKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BevaBaseKit_Example.release.xcconfig"; path = "Target Support Files/Pods-BevaBaseKit_Example/Pods-BevaBaseKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		461E3A4E775DA5443499217C /* Pods_BevaBaseKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BevaBaseKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* BevaBaseKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BevaBaseKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +51,8 @@
 		6003F59B195388D20070C39A /* BevaBaseKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BevaBaseKit-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* PKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* PKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* PKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* PKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKViewController.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* PKOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKOneViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* PKOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKOneViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* BevaBaseKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BevaBaseKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,12 +61,12 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		86259DF5CB984A64F669D710 /* Pods_BevaBaseKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BevaBaseKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8850A12ED1CF433195724B3E /* Pods-BevaBaseKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BevaBaseKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BevaBaseKit_Tests/Pods-BevaBaseKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		89EC8BD925E833C8B34B5830 /* Pods-BevaBaseKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BevaBaseKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-BevaBaseKit_Tests/Pods-BevaBaseKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AA2BF48F1B6E4A00712FC209 /* BevaBaseKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BevaBaseKit.podspec; path = ../BevaBaseKit.podspec; sourceTree = "<group>"; };
-		E4E5BDF2DA35C26261010FEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AA2BF48F1B6E4A00712FC209 /* BevaBaseKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BevaBaseKit.podspec; path = ../BevaBaseKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD7DB30BE9199D19DCC7FBCB /* libPods-BevaBaseKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BevaBaseKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E5BDF2DA35C26261010FEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				4A48D481D1FC20766B6BED36 /* Pods_BevaBaseKit_Example.framework in Frameworks */,
+				FCD4F3B361FF194324D3ABC7 /* libPods-BevaBaseKit_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				E69ABD5A28462B940596C617 /* Pods_BevaBaseKit_Tests.framework in Frameworks */,
+				5496EBF5F275146B3B38978F /* libPods-BevaBaseKit_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,6 @@
 				8850A12ED1CF433195724B3E /* Pods-BevaBaseKit_Tests.debug.xcconfig */,
 				89EC8BD925E833C8B34B5830 /* Pods-BevaBaseKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				86259DF5CB984A64F669D710 /* Pods_BevaBaseKit_Example.framework */,
-				461E3A4E775DA5443499217C /* Pods_BevaBaseKit_Tests.framework */,
+				18D0AEDA7AE3CD22A50A1104 /* libPods-BevaBaseKit_Example.a */,
+				AD7DB30BE9199D19DCC7FBCB /* libPods-BevaBaseKit_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,8 +146,8 @@
 				6003F59C195388D20070C39A /* PKAppDelegate.h */,
 				6003F59D195388D20070C39A /* PKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* PKViewController.h */,
-				6003F5A6195388D20070C39A /* PKViewController.m */,
+				6003F5A5195388D20070C39A /* PKOneViewController.h */,
+				6003F5A6195388D20070C39A /* PKOneViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -208,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				31930BCE9BFDFE0006C1ED85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +246,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "673729631@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 4N8627W97S;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +259,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,28 +297,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31930BCE9BFDFE0006C1ED85 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BevaBaseKit_Example/Pods-BevaBaseKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BevaBaseKit/BevaBaseKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BevaBaseKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BevaBaseKit_Example/Pods-BevaBaseKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		559ACAA1836B13F04BE6973C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* PKAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* PKViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* PKOneViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +478,7 @@
 			baseConfigurationReference = 25FCD1CE43C3E6C31AD7C7B5 /* Pods-BevaBaseKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4N8627W97S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BevaBaseKit/BevaBaseKit-Prefix.pch";
 				INFOPLIST_FILE = "BevaBaseKit/BevaBaseKit-Info.plist";
@@ -514,6 +495,7 @@
 			baseConfigurationReference = 3D4617F47D2A61C1B3C314FA /* Pods-BevaBaseKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4N8627W97S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BevaBaseKit/BevaBaseKit-Prefix.pch";
 				INFOPLIST_FILE = "BevaBaseKit/BevaBaseKit-Info.plist";

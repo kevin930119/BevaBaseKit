@@ -1,16 +1,29 @@
 PODS:
-  - BevaBaseKit (0.1.0)
+  - BevaBaseKit (0.1.0):
+    - Masonry
+    - SDWebImage
+  - Masonry (1.1.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
 
 DEPENDENCIES:
   - BevaBaseKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - SDWebImage
 
 EXTERNAL SOURCES:
   BevaBaseKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BevaBaseKit: 1b3ddb1f5bc6cb5598e77f93c3b6a65f8a66139c
+  BevaBaseKit: 6764d14cddaac818bfb6ec28eac97ee34ef973a1
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
 
-PODFILE CHECKSUM: f4ad2aadc5dce01607cf34c48285925cd2f4b5af
+PODFILE CHECKSUM: 77d20c5ec2d94e74da4caa00544ddf46a5be6c11
 
 COCOAPODS: 1.6.1

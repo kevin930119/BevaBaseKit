@@ -1,0 +1,1 @@
+../../../../../BevaBaseKit/Classes/uikit/PKAdaptScreenEdgePanScrollView.h

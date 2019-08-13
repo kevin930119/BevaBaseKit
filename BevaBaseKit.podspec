@@ -31,7 +31,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit', 'AdSupport'
   s.dependency 'Masonry'
   s.dependency 'SDWebImage'
-  s.dependency 'FLAnimatedImage'
 
   s.source_files = 'BevaBaseKit/Classes/**/*'
   
@@ -39,5 +38,5 @@ Pod::Spec.new do |s|
   #   'BevaBaseKit' => ['BevaBaseKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'Pod/Classes/**/*.h'
 end
