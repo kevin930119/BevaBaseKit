@@ -1,0 +1,16 @@
+PODS:
+  - BevaBaseKit (0.1.0)
+
+DEPENDENCIES:
+  - BevaBaseKit (from `../`)
+
+EXTERNAL SOURCES:
+  BevaBaseKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BevaBaseKit: 1b3ddb1f5bc6cb5598e77f93c3b6a65f8a66139c
+
+PODFILE CHECKSUM: f4ad2aadc5dce01607cf34c48285925cd2f4b5af
+
+COCOAPODS: 1.6.1

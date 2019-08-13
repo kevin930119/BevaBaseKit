@@ -1,0 +1,6 @@
+framework module BevaBaseKit {
+  umbrella header "BevaBaseKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
