@@ -38,5 +38,5 @@ Pod::Spec.new do |s|
   #   'BevaBaseKit' => ['BevaBaseKit/Assets/*.png']
   # }
 
-   s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'BevaBaseKit/Classes/**/*.h'
 end

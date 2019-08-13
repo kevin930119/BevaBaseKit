@@ -8,6 +8,16 @@
 #ifndef BevaBaseKit_h
 #define BevaBaseKit_h
 
-#import "PKUIKit.h"
+#import "PKDevice.h"
+
+#import "UIView+PK.h"
+#import "UIColor+PK.h"
+
+#import "PKButton.h"
+#import "PKImageView.h"
+#import "PKViewController.h"
+#import "PKCustomNavigationController.h"
+#import "PKAdaptScreenEdgePanScrollView.h"
+#import "PKAdaptScreenEdgePanCollectionView.h"
 
 #endif /* BevaBaseKit_h */

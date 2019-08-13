@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BevaBaseKit: 6764d14cddaac818bfb6ec28eac97ee34ef973a1
+  BevaBaseKit: 6b7726cda2af3ee29e8895144637529db157d193
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
 

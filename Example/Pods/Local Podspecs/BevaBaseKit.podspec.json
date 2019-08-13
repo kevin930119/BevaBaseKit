@@ -31,5 +31,5 @@
     ]
   },
   "source_files": "BevaBaseKit/Classes/**/*",
-  "public_header_files": "Pod/Classes/**/*.h"
+  "public_header_files": "BevaBaseKit/Classes/**/*.h"
 }
