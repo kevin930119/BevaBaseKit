@@ -291,6 +291,8 @@ static float const kPKPlayerDefaultLoadedDurationForPlay = 3.0f;
                 _currentPlaybackLoadedDuration > 0) {
                 self.status = PKPlayerStatusBuffering;
             }
+            
+            self.status = PKPlayerStatusPlaying;
             return;
         }
         
