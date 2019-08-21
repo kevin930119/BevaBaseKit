@@ -49,6 +49,8 @@
 		384B12881307E382BCAF3AFC82CC9405 /* SDImageLoadersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C8D18458516CB456C502B73D60AEB5E6 /* SDImageLoadersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3C3C2274A30261DB7D4F68050D5E5155 /* UIImage+Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE0AF821A598151E7AF4DB9B7BA751B /* UIImage+Metadata.m */; };
 		3CEF0F83F21248152B897D75D75E8FD2 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = A141C4C168E7B0F2C51D149D6D4B52CB /* SDWebImageError.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D1DC956230D1B7E00A8A48A /* PKPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1DC954230D1B7E00A8A48A /* PKPlayer.h */; };
+		3D1DC957230D1B7E00A8A48A /* PKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DC955230D1B7E00A8A48A /* PKPlayer.m */; };
 		3DA3779D230290F10052BFDE /* BevaBaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA3779C230290F10052BFDE /* BevaBaseKit.h */; };
 		3DF3C5771E214272CBDAB27AFFECB439 /* UIView+PK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4B6A95889B16357DCA2D8A49854C68 /* UIView+PK.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3EBBD918E0E076760AA23C4DFAF26A81 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F70B5494C53FE89D4C040A3EFC8B6EE /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -258,6 +260,8 @@
 		337EEF2D1FF4C09F528754B8BC7333C8 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		33E428E6E1B261CCBBA221CB052D99E5 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/Core/SDWebImageTransition.m; sourceTree = "<group>"; };
 		3CE4061E7BA5C1654B57A980A76A76B2 /* UIView+PK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+PK.m"; sourceTree = "<group>"; };
+		3D1DC954230D1B7E00A8A48A /* PKPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKPlayer.h; sourceTree = "<group>"; };
+		3D1DC955230D1B7E00A8A48A /* PKPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKPlayer.m; sourceTree = "<group>"; };
 		3DA3779C230290F10052BFDE /* BevaBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BevaBaseKit.h; path = BevaBaseKit/Classes/BevaBaseKit.h; sourceTree = "<group>"; };
 		3E418385B0EE98E6EC54EB9738FC00C5 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/Core/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		3F56435FADB987F3BB0DF807D48E7CD6 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/Core/SDImageCache.m; sourceTree = "<group>"; };
@@ -537,6 +541,16 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		3D1DC953230D1B6900A8A48A /* components */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DC954230D1B7E00A8A48A /* PKPlayer.h */,
+				3D1DC955230D1B7E00A8A48A /* PKPlayer.m */,
+			);
+			name = components;
+			path = BevaBaseKit/Classes/components;
+			sourceTree = "<group>";
+		};
 		428E4BFE46A064E0EC473A8EEAA0A571 /* uikit */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,6 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				3DA3779C230290F10052BFDE /* BevaBaseKit.h */,
+				3D1DC953230D1B6900A8A48A /* components */,
 				DC2C2A31E8B6D3331089D95F176876DC /* foundation */,
 				5A9ED96C261A6DCFAF2D03D1727A7721 /* Pod */,
 				0B15B839475503A47DEF664E89F4F056 /* Support Files */,
@@ -890,6 +905,7 @@
 				ACC0748F41F2BA2D2E0237853D4074DE /* PKAdaptScreenEdgePanCollectionView.h in Headers */,
 				C744EA8F216EAA76988FA7746F5CA32A /* PKAdaptScreenEdgePanScrollView.h in Headers */,
 				3DA3779D230290F10052BFDE /* BevaBaseKit.h in Headers */,
+				3D1DC956230D1B7E00A8A48A /* PKPlayer.h in Headers */,
 				FC05926FAD94581CACFE6F9AE527D01F /* PKButton.h in Headers */,
 				6644A9081FB46F8C65859B3D0F428EA5 /* PKCustomNavigationController.h in Headers */,
 				1F40B5AE3EDFE8E181BE9E8593E9C1E0 /* PKDevice.h in Headers */,
@@ -1046,6 +1062,7 @@
 			files = (
 				413C8A224E367CCDF03B44B54F0BDE2F /* BevaBaseKit-dummy.m in Sources */,
 				C8996B30B8CF0D570F0C1ADE33A874D5 /* PKAdaptScreenEdgePanCollectionView.m in Sources */,
+				3D1DC957230D1B7E00A8A48A /* PKPlayer.m in Sources */,
 				75D238CFAACB7FBB0B7ECEA51D804590 /* PKAdaptScreenEdgePanScrollView.m in Sources */,
 				D0442DDC581EACC124425A97189526CE /* PKButton.m in Sources */,
 				FC1E30ED979F035A3E7A3DE8584AEB6E /* PKCustomNavigationController.m in Sources */,
