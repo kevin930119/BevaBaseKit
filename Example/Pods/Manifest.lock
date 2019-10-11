@@ -1,5 +1,5 @@
 PODS:
-  - BevaBaseKit (0.1.0):
+  - BevaBaseKit (0.1.3):
     - Masonry
     - SDWebImage
   - Masonry (1.1.0)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BevaBaseKit: 6b7726cda2af3ee29e8895144637529db157d193
+  BevaBaseKit: 96bb67f0294ff351212cfbb57bf531d235b7475a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
 

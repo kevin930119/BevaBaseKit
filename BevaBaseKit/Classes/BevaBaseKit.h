@@ -9,9 +9,14 @@
 #define BevaBaseKit_h
 
 #import "PKDevice.h"
+#import "PKFileManager.h"
+
+#import "NSString+PK.h"
+#import "NSURL+PK.h"
 
 #import "UIView+PK.h"
 #import "UIColor+PK.h"
+#import "UIImage+PK.h"
 
 #import "PKButton.h"
 #import "PKImageView.h"

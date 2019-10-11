@@ -29,6 +29,10 @@
         make.size.mas_equalTo(CGSizeMake(100, 100));
         make.center.equalTo(self.view);
     }];
+    
+    if ([PKDevice currentDevice].isPad) {
+        NSLog(@"啦啦啦");
+    }
 }
 
 - (void)didReceiveMemoryWarning

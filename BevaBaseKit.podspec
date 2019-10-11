@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BevaBaseKit'
-  s.version          = '0.1.2'
+  s.version          = '0.1.4'
   s.summary          = '贝瓦基础开发库'
 
 # This description is used to generate tags and improve search results.
@@ -34,9 +34,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'BevaBaseKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'BevaBaseKit' => ['BevaBaseKit/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'BevaBaseKit' => ['BevaBaseKit/Resources/*.plist']
+   }
 
    s.public_header_files = 'BevaBaseKit/Classes/**/*.h'
 end

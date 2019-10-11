@@ -10,6 +10,8 @@
 #import <sys/utsname.h>
 #import <AdSupport/ASIdentifierManager.h>
 
+#import "PKBundleManager.h"
+
 #import "PKDevice.h"
 
 static NSString * const kPKClientKeychainAccountName = @"com.prokids.apps";
