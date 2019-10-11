@@ -33,12 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  最大屏幕长度
  */
-@property (nonatomic, assign, readonly) CGFloat maxLengthOfScreen;
+@property (nonatomic, assign, readonly) float maxLengthOfScreen;
 
 /**
  最小屏幕长度
  */
-@property (nonatomic, assign, readonly) CGFloat minLengthOfScreen;
+@property (nonatomic, assign, readonly) float minLengthOfScreen;
 
 /**
  设备标识符(E621E1F8-C36C-495A-93FC-0C247A3E6E5F)

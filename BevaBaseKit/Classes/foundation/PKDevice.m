@@ -21,8 +21,8 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 
 @interface PKDevice ()
 
-@property (nonatomic, assign) CGFloat maxLengthOfScreen;
-@property (nonatomic, assign) CGFloat minLengthOfScreen;
+@property (nonatomic, assign) float maxLengthOfScreen;
+@property (nonatomic, assign) float minLengthOfScreen;
 @property (nonatomic, copy, nullable) NSString *deviceIdentifier;
 @property (nonatomic, copy, nullable) NSString *deviceIdentifierWithoutHyphen;
 @property (nonatomic, copy, nonnull) NSString *UUID;
