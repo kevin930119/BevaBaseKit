@@ -65,7 +65,7 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return NO;
 }
 
-- (CGFloat)maxLengthOfScreen {
+- (float)maxLengthOfScreen {
     if (_maxLengthOfScreen) {
         return _maxLengthOfScreen;
     }
@@ -73,7 +73,7 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return _maxLengthOfScreen;
 }
 
-- (CGFloat)minLengthOfScreen {
+- (float)minLengthOfScreen {
     if (_minLengthOfScreen) {
         return _minLengthOfScreen;
     }

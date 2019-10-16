@@ -307,10 +307,7 @@
     }
     NSString *viewClassName = NSStringFromClass([view class]);
     viewClassName = [viewClassName stringByReplacingOccurrencesOfString:@"_" withString:@""];
-    if ([viewClassName isEqualToString:@"PKNavigationBar"]) {
-        return nil;
-    }
-    if ([viewClassName isEqualToString:@"UINavigationBarContentView"]) {
+    if ([viewClassName isEqualToString:@"UINavigationBarContentView"] || [viewClassName isEqualToString:@"PKCustomNavigationBar"]) {
         // 获取背景色alpha
         CGFloat alpha = 0;
         if (self.pk_navigationBarColor) {
