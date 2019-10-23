@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface PKOneViewController : UIViewController
+#import <BevaBaseKit/BevaBaseKit.h>
+
+@interface PKOneViewController : PKViewController
 
 @end

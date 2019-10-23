@@ -87,7 +87,6 @@
         _pk_fakeNavigationBarShadowLine.userInteractionEnabled = NO;
         _pk_fakeNavigationBarShadowLine.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1];
         _pk_fakeNavigationBarShadowLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _pk_fakeNavigationBarShadowLine.hidden = YES;
     }
     return _pk_fakeNavigationBarShadowLine;
 }

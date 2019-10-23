@@ -6,6 +6,9 @@
 //  Copyright (c) 2019 673729631@qq.com. All rights reserved.
 //
 
+#import "PKBVNavigationController.h"
+#import "PKOneViewController.h"
+
 #import "PKAppDelegate.h"
 
 @implementation PKAppDelegate
@@ -13,6 +16,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    PKOneViewController *vc = [PKOneViewController new];
+    PKBVNavigationController *nav = [[PKBVNavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
     return YES;
 }
 

@@ -9,6 +9,8 @@
 #import <BevaBaseKit/BevaBaseKit.h>
 #import <Masonry.h>
 
+#import "PKTwoViewController.h"
+
 #import "PKOneViewController.h"
 
 @interface PKOneViewController ()
@@ -21,8 +23,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"第一个";
     PKImageView *imgView = [PKImageView new];
-    imgView.backgroundColor = [UIColor redColor];
     [imgView setImageWithURLString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565686233565&di=75ed57d9feb3e33082eab85dd7eb9884&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Ffeed%2Fpic%2Fitem%2F0eb30f2442a7d933b0b7b483a14bd11373f00126.jpg"];
     [self.view addSubview:imgView];
     [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -33,6 +35,13 @@
     if ([PKDevice currentDevice].isPad) {
         NSLog(@"啦啦啦");
     }
+    
+    self.pk_navigationBarShadowLineHidden = YES;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    PKTwoViewController *vc = [PKTwoViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
