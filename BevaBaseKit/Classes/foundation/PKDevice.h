@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define kPKDeviceScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define kPKDeviceScreenHeight   [UIScreen mainScreen].bounds.size.height
-#define kPKDeviceNavigationBarHeight    44
+#define kPKDeviceNavigationBarHeight    [[PKDevice currentDevice] navigationBarHeight]
 #define kPKDeviceStatusBarHeight    ([PKDevice currentDevice].isIphoneX?44:20)
 #define kPKDeviceTabBarHeight   ([PKDevice currentDevice].isIphoneX?(49+34):49)
 #define kPKDeviceTopSafeHeight  ([PKDevice currentDevice].isIphoneX?44:0)
@@ -86,6 +86,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return 合法返回YES
  */
 - (BOOL)isValidDeviceID:(NSString *)deviceID;
+
+/**
+ 导航栏高度
+ */
+- (NSInteger)navigationBarHeight;
 
 @end
 

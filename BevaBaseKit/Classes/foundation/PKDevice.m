@@ -166,6 +166,16 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return YES;
 }
 
+- (NSInteger)navigationBarHeight {
+    NSInteger height = 44;
+    if (self.isPad) {
+        if (@available(iOS 12.0, *)) {
+            height = 50;
+        }
+    }
+    return height;
+}
+
 #pragma mark - Private methods
 - (NSString *)_deviceIdentifierByCreating {
     // 从钥匙串中读取
