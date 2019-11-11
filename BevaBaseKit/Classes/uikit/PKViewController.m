@@ -139,7 +139,7 @@
     if (!self.navigationController) {
         return 0;
     }
-    if (self.navigationController.navigationBarHidden) {
+    if (self.pk_prefersNavigationBarHidden) {
         return 0;
     }
     NSInteger statusBarHeight = kPKDeviceStatusBarHeight;
