@@ -18,16 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"第二个";
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 120, 200, 40)];
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(_action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)_action {
+    
 }
-*/
 
 @end

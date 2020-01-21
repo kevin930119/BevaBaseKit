@@ -24,30 +24,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.title = @"第一个";
-    PKImageView *imgView = [PKImageView new];
-    [imgView setImageWithURLString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565686233565&di=75ed57d9feb3e33082eab85dd7eb9884&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Ffeed%2Fpic%2Fitem%2F0eb30f2442a7d933b0b7b483a14bd11373f00126.jpg"];
-    [self.view addSubview:imgView];
-    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(100, 100));
-        make.center.equalTo(self.view);
-    }];
-    
-    if ([PKDevice currentDevice].isPad) {
-        NSLog(@"啦啦啦");
-    }
     
     self.pk_navigationBarShadowLineHidden = YES;
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 120, 200, 40)];
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(_action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)_action {
     PKTwoViewController *vc = [PKTwoViewController new];
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

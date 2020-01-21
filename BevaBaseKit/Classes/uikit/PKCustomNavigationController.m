@@ -10,6 +10,7 @@
 
 #import "Masonry.h"
 
+#import "PKDevice.h"
 #import "PKViewController.h"
 
 #import "PKCustomNavigationController.h"
@@ -257,6 +258,14 @@
         make.bottom.left.width.equalTo(self.pk_insteadBackgroundView);
         make.height.mas_equalTo(0.5);
     }];
+}
+
+- (void)setFrame:(CGRect)frame {
+    if (frame.origin.y <= 0) {
+        frame.origin.y = kPKDeviceStatusBarHeight;
+    }
+    
+    [super setFrame:frame];
 }
 
 - (void)setPk_navigationBarColor:(UIColor *)pk_navigationBarColor {
