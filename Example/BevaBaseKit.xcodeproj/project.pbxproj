@@ -313,15 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BevaBaseKit_Example/Pods-BevaBaseKit_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/BevaBaseKit/BevaBaseKit.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BevaBaseKit.bundle",
 			);

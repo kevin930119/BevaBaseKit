@@ -1,6 +1,6 @@
 {
   "name": "BevaBaseKit",
-  "version": "0.1.3",
+  "version": "0.1.10",
   "summary": "贝瓦基础开发库",
   "description": "这是贝瓦的基础开发库",
   "homepage": "https://github.com/kevin930119/BevaBaseKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/kevin930119/BevaBaseKit.git",
-    "tag": "0.1.3"
+    "tag": "0.1.10"
   },
   "platforms": {
     "ios": "8.0"
