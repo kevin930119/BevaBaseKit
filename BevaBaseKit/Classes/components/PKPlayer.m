@@ -46,18 +46,18 @@ static float const kPKPlayerDefaultLoadedDurationForPlay = 3.0f;
 @implementation PKPlayer
 
 #pragma mark - Life cycle
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+//- (void)dealloc {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//}
 
 - (instancetype)init {
     if (self = [super init]) {
         self.wantToSeekPosition = -1;
         
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationWillResignActiveNotification object:nil];
-        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
-        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+//        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+//        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationWillResignActiveNotification object:nil];
+//        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+//        [center addObserver:self selector:@selector(_handleApplicationStateChangeFromNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     }
     return self;
 }

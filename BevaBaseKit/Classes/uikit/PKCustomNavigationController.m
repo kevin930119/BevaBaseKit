@@ -248,6 +248,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    CGRect frame = self.frame;
+    if (frame.origin.y <= 0) {
+        frame.origin.y = kPKDeviceStatusBarHeight;
+        self.frame = frame;
+    }
+    
     if (self.pk_insteadBackgroundView.superview) {
         return;
     }
@@ -264,7 +271,6 @@
     if (frame.origin.y <= 0) {
         frame.origin.y = kPKDeviceStatusBarHeight;
     }
-    
     [super setFrame:frame];
 }
 
