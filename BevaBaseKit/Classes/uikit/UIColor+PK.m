@@ -59,4 +59,55 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+#pragma mark - 适配iOS13的黑暗模式
++ (UIColor *)colorByUserInterfaceStyle:(UIColor *)lightColor darkColor:(UIColor *)darkColor {
+    if (!darkColor) {
+        return lightColor;
+    }
+    
+    if (@available(iOS 13.0, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return darkColor;
+            } else {
+                return lightColor;
+            }
+        }];
+    }
+    
+    return lightColor;
+}
+
++ (UIColor *)colorByUserInterfaceStyleUsingHexInt:(unsigned int)lightHexInt dark:(unsigned int)darkHexInt {
+    if (@available(iOS 13.0, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return [self colorWithHexInt:darkHexInt];
+            } else {
+                return [self colorWithHexInt:lightHexInt];
+            }
+        }];
+    }
+    
+    return [self colorWithHexInt:lightHexInt];
+}
+
++ (UIColor *)colorByUserInterfaceStyleUsingHexString:(NSString *)lightHexString dark:(NSString *)darkHexString {
+    if (!darkHexString) {
+        return [self colorWithHexString:lightHexString];
+    }
+    
+    if (@available(iOS 13.0, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                return [self colorWithHexString:darkHexString];
+            } else {
+                return [self colorWithHexString:lightHexString];
+            }
+        }];
+    }
+    
+    return [self colorWithHexString:lightHexString];
+}
+
 @end

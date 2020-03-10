@@ -47,6 +47,35 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable UIColor *)colorWithHexInt:(unsigned int)hex alpha:(CGFloat)alpha;
 
+#pragma mark - 适配iOS13的黑暗模式
+
+/**
+ 适配黑暗模式
+ 
+ @param lightColor 正常颜色
+ @param darkColor 暗黑模式颜色
+ @return 颜色
+ */
++ (nullable UIColor *)colorByUserInterfaceStyle:(UIColor *)lightColor darkColor:(nullable UIColor *)darkColor;
+
+/**
+适配黑暗模式
+
+@param lightHexInt 正常颜色
+@param darkHexInt 暗黑模式颜色
+@return 颜色
+*/
++ (nullable UIColor *)colorByUserInterfaceStyleUsingHexInt:(unsigned int)lightHexInt dark:(unsigned int)darkHexInt;
+
+/**
+适配黑暗模式
+
+@param lightHexString 正常颜色
+@param darkHexString 暗黑模式颜色
+@return 颜色
+*/
++ (nullable UIColor *)colorByUserInterfaceStyleUsingHexString:(NSString *)lightHexString dark:(nullable NSString *)darkHexString;
+
 @end
 
 NS_ASSUME_NONNULL_END
