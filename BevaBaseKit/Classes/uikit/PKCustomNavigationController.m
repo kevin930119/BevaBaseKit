@@ -197,12 +197,22 @@
 - (void)_updateStatusBarWithViewController:(PKViewController *)viewController {
     // 设置状态栏样式
     UIStatusBarStyle statusBarStyle = [viewController preferredStatusBarStyle];
-    if (statusBarStyle == UIStatusBarStyleDefault) {
-        // 黑色
-        self.navigationBar.barStyle = UIBarStyleDefault;
+    if (@available(iOS 13.0, *)) {
+        if (statusBarStyle == UIStatusBarStyleDefault || statusBarStyle == UIStatusBarStyleDarkContent) {
+            // 黑色
+            self.navigationBar.barStyle = UIBarStyleDefault;
+        } else {
+            // 白色
+            self.navigationBar.barStyle = UIBarStyleBlack;
+        }
     } else {
-        // 白色
-        self.navigationBar.barStyle = UIBarStyleBlack;
+        if (statusBarStyle == UIStatusBarStyleDefault) {
+            // 黑色
+            self.navigationBar.barStyle = UIBarStyleDefault;
+        } else {
+            // 白色
+            self.navigationBar.barStyle = UIBarStyleBlack;
+        }
     }
 }
 
