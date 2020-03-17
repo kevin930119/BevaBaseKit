@@ -94,6 +94,32 @@
     }
 }
 
+- (void)updateOfBaseNavigationBarColorUsingTopViewControllerConfig {
+    if (!self.viewControllers.lastObject) {
+        return;
+    }
+    if (![self.viewControllers.lastObject isKindOfClass:[PKViewController class]]) {
+        return;
+    }
+    
+    PKViewController *viewController = self.viewControllers.lastObject;
+    
+    UIColor *pk_navigationBarColor = viewController.pk_navigationBarColor;
+    if (@available(iOS 13.0, *)) {
+        UIColor *finalColor = [pk_navigationBarColor resolvedColorWithTraitCollection:viewController.traitCollection];
+        if (finalColor) {
+            ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = finalColor;
+        } else {
+            ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = pk_navigationBarColor;
+        }
+    } else {
+        ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = pk_navigationBarColor;
+    }
+    
+    BOOL pk_navigationBarShadowLineHidden = viewController.pk_navigationBarShadowLineHidden;
+    ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarShadowLineHidden = pk_navigationBarShadowLineHidden;
+}
+
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     if (self.viewControllers.count < 2) {
@@ -183,7 +209,16 @@
 
 - (void)_updateNavigationBarWithViewController:(PKViewController *)viewController {
     UIColor *pk_navigationBarColor = viewController.pk_navigationBarColor;
-    ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = pk_navigationBarColor;
+    if (@available(iOS 13.0, *)) {
+        UIColor *finalColor = [pk_navigationBarColor resolvedColorWithTraitCollection:viewController.traitCollection];
+        if (finalColor) {
+            ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = finalColor;
+        } else {
+            ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = pk_navigationBarColor;
+        }
+    } else {
+        ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = pk_navigationBarColor;
+    }
     float pk_navigationBarAlpha = viewController.pk_navigationBarAlpha;
     ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarAlpha = pk_navigationBarAlpha;
     BOOL pk_navigationBarHidden = viewController.pk_navigationBarHidden;
@@ -219,7 +254,7 @@
 - (void)_updateNavigationBarToEmpty {
     ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarColor = [UIColor clearColor];
     ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarAlpha = 1.0f;
-    ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarHidden = NO;
+    ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarHidden = YES;
     ((PKCustomNavigationBar *)self.navigationBar).pk_navigationBarShadowLineHidden = YES;
 }
 

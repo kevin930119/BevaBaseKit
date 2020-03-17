@@ -30,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)updateOfBaseNavigationBarUsingTopViewControllerConfig;
 
+/**
+使用最上层控制器的配置更新导航栏颜色
+*/
+- (void)updateOfBaseNavigationBarColorUsingTopViewControllerConfig;
+
 @end
 
 @interface PKCustomNavigationBar : UINavigationBar

@@ -78,6 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNeedsUpdateOfPKNavigationBar;
 
 /**
+更新导航栏颜色
+*/
+- (void)setNeedsUpdateOfPKNavigationBarColor;
+
+/**
  设置是否隐藏假导航栏
  
  @param hidden 是否隐藏

@@ -228,6 +228,22 @@
     [navigationController updateOfBaseNavigationBarUsingTopViewControllerConfig];
 }
 
+- (void)setNeedsUpdateOfPKNavigationBarColor {
+    if (!self.pk_isViewDidApear) {
+        // 为了保证在转场动画期间无法修改导航栏样式，避免冲突
+        return;
+    }
+    if (!self.navigationController) {
+        return;
+    }
+    if (![self.navigationController isKindOfClass:[PKCustomNavigationController class]]) {
+        return;
+    }
+    PKCustomNavigationController *navigationController = (PKCustomNavigationController *)self.navigationController;
+    // 更新导航栏颜色
+    [navigationController updateOfBaseNavigationBarColorUsingTopViewControllerConfig];
+}
+
 - (void)setFakeNavigationBarHidden:(BOOL)hidden {
     if (!self.pk_fakeNavigationBar.superview) {
         [self.view addSubview:self.pk_fakeNavigationBar];
