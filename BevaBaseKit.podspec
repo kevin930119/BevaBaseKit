@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BevaBaseKit'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = '贝瓦基础开发库'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   
-  s.frameworks = 'UIKit', 'AdSupport', 'AVFoundation'
-  s.dependency 'Masonry'
-  s.dependency 'SDWebImage'
+  s.frameworks = 'UIKit', 'AVFoundation'
 
   s.source_files = 'BevaBaseKit/Classes/**/*'
   

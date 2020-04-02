@@ -8,8 +8,6 @@
 
 #import <objc/runtime.h>
 
-#import "Masonry.h"
-
 #import "PKCustomNavigationController.h"
 #import "PKDevice.h"
 
@@ -86,7 +84,6 @@
         _pk_fakeNavigationBarShadowLine = [UIView new];
         _pk_fakeNavigationBarShadowLine.userInteractionEnabled = NO;
         _pk_fakeNavigationBarShadowLine.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1];
-        _pk_fakeNavigationBarShadowLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _pk_fakeNavigationBarShadowLine;
 }
@@ -249,10 +246,16 @@
         [self.view addSubview:self.pk_fakeNavigationBar];
         self.pk_fakeNavigationBar.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), self.pk_offetForHeadspace);
         [self.pk_fakeNavigationBar addSubview:self.pk_fakeNavigationBarShadowLine];
-        [self.pk_fakeNavigationBarShadowLine mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.width.bottom.equalTo(self.pk_fakeNavigationBar);
-            make.height.mas_equalTo(0.5);
-        }];
+        // 增加约束
+        self.pk_fakeNavigationBarShadowLine.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.pk_fakeNavigationBarShadowLine attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.pk_fakeNavigationBar attribute:NSLayoutAttributeWidth multiplier:1 constant:0];
+        [self.pk_fakeNavigationBar addConstraint:widthConstraint];
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.pk_fakeNavigationBarShadowLine attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1 constant:0.5];
+        [self.pk_fakeNavigationBarShadowLine addConstraint:heightConstraint];
+        NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.pk_fakeNavigationBarShadowLine attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.pk_fakeNavigationBar attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
+        [self.pk_fakeNavigationBar addConstraint:leftConstraint];
+        NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:self.pk_fakeNavigationBarShadowLine attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.pk_fakeNavigationBar attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        [self.pk_fakeNavigationBar addConstraint:bottomConstraint];
     }
     if (hidden) {
         self.pk_fakeNavigationBar.hidden = YES;

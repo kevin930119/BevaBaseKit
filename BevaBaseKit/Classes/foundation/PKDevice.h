@@ -52,8 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly, nonnull) NSString *UUID;
 
-@property (nonatomic, copy, readonly, nonnull) NSString *IDFA;
-
 @property (nonatomic, copy, readonly, nonnull) NSString *IDFV;
 
 @property (nonatomic, copy, readonly, nullable) NSString *appBundleIdentifier;

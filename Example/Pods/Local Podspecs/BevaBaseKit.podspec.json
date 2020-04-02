@@ -1,6 +1,6 @@
 {
   "name": "BevaBaseKit",
-  "version": "0.1.10",
+  "version": "0.2.5",
   "summary": "贝瓦基础开发库",
   "description": "这是贝瓦的基础开发库",
   "homepage": "https://github.com/kevin930119/BevaBaseKit",
@@ -13,24 +13,15 @@
   },
   "source": {
     "git": "https://github.com/kevin930119/BevaBaseKit.git",
-    "tag": "0.1.10"
+    "tag": "0.2.5"
   },
   "platforms": {
     "ios": "8.0"
   },
   "frameworks": [
     "UIKit",
-    "AdSupport",
     "AVFoundation"
   ],
-  "dependencies": {
-    "Masonry": [
-
-    ],
-    "SDWebImage": [
-
-    ]
-  },
   "source_files": "BevaBaseKit/Classes/**/*",
   "resource_bundles": {
     "BevaBaseKit": [

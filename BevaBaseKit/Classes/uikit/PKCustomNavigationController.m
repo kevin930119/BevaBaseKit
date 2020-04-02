@@ -8,8 +8,6 @@
 
 #import <objc/runtime.h>
 
-#import "Masonry.h"
-
 #import "PKDevice.h"
 #import "PKViewController.h"
 
@@ -306,10 +304,16 @@
     [self.subviews.firstObject insertSubview:self.pk_insteadBackgroundView atIndex:0];
     self.pk_insteadBackgroundView.frame = self.pk_insteadBackgroundView.superview.bounds;
     [self.pk_insteadBackgroundView addSubview:self.pk_insteadShadowLine];
-    [self.pk_insteadShadowLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.left.width.equalTo(self.pk_insteadBackgroundView);
-        make.height.mas_equalTo(0.5);
-    }];
+    // 增加约束
+    self.pk_insteadShadowLine.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.pk_insteadShadowLine attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.pk_insteadBackgroundView attribute:NSLayoutAttributeWidth multiplier:1 constant:0];
+    [self.pk_insteadBackgroundView addConstraint:widthConstraint];
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.pk_insteadShadowLine attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1 constant:0.5];
+    [self.pk_insteadShadowLine addConstraint:heightConstraint];
+    NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.pk_insteadShadowLine attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.pk_insteadBackgroundView attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
+    [self.pk_insteadBackgroundView addConstraint:leftConstraint];
+    NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:self.pk_insteadShadowLine attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.pk_insteadBackgroundView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [self.pk_insteadBackgroundView addConstraint:bottomConstraint];
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -353,7 +357,6 @@
         _pk_insteadShadowLine = [UIView new];
         _pk_insteadShadowLine.userInteractionEnabled = NO;
         _pk_insteadShadowLine.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1];
-        _pk_insteadShadowLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _pk_insteadShadowLine.hidden = YES;
     }
     return _pk_insteadShadowLine;

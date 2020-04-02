@@ -19,7 +19,6 @@
 #import "UIImage+PK.h"
 
 #import "PKButton.h"
-#import "PKImageView.h"
 #import "PKViewController.h"
 #import "PKCustomNavigationController.h"
 #import "PKAdaptScreenEdgePanScrollView.h"

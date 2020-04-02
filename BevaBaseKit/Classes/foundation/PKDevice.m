@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
-#import <AdSupport/ASIdentifierManager.h>
 
 #import "PKBundleManager.h"
 
@@ -26,7 +25,6 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 @property (nonatomic, copy, nullable) NSString *deviceIdentifier;
 @property (nonatomic, copy, nullable) NSString *deviceIdentifierWithoutHyphen;
 @property (nonatomic, copy, nonnull) NSString *UUID;
-@property (nonatomic, copy, nonnull) NSString *IDFA;
 @property (nonatomic, copy, nonnull) NSString *IDFV;
 @property (nonatomic, copy, nullable) NSString *appBundleIdentifier;
 @property (nonatomic, copy, nullable) NSString *appVersion;
@@ -102,13 +100,6 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
         _UUID = [[NSUUID UUID] UUIDString];
     }
     return _UUID;
-}
-
-- (NSString *)IDFA {
-    if (!_IDFA) {
-        _IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    }
-    return _IDFA;
 }
 
 - (NSString *)IDFV {
@@ -188,15 +179,6 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     deviceIDStr = [self _deviceIDFromUserDefaults];
     if ([self _isValidDeviceID:deviceIDStr]) {
         [self _saveDeviceIDToKeychain:deviceIDStr];
-        return deviceIDStr;
-    }
-    
-    // 获取IDFA
-    deviceIDStr = [self IDFA];
-    if ([self _isValidDeviceID:deviceIDStr]) {
-        // 保存
-        [self _saveDeviceIDToKeychain:deviceIDStr];
-        [self _saveDeviceIDToUserDefaults:deviceIDStr];
         return deviceIDStr;
     }
     
