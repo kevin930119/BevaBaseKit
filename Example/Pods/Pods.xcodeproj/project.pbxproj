@@ -15,6 +15,8 @@
 		3785173567E18008875120C6EA36E791 /* PKFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB31D14BCACECAD8BB95574106DAA4 /* PKFileManager.m */; };
 		3AEC210D07F109A969B006E1877ECCD6 /* UIImage+PK.h in Headers */ = {isa = PBXBuildFile; fileRef = F3270911CF66A83C6784159A6FE2F1EA /* UIImage+PK.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3D50710D5718B6BFFC013678AF7130C7 /* PKBundleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42BF14E75AD86905B133A425DBDB7975 /* PKBundleManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D85E1F02465586A007FCE16 /* PKKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D85E1EE2465586A007FCE16 /* PKKeychainItem.h */; };
+		3D85E1F12465586A007FCE16 /* PKKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D85E1EF2465586A007FCE16 /* PKKeychainItem.m */; };
 		3DF7225788783ED73100F73B15430225 /* NSURL+PK.h in Headers */ = {isa = PBXBuildFile; fileRef = B330A512BE5EFCD8D302BD22B7C79546 /* NSURL+PK.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4174AD6B3417EBC2A3F7B35DB25F0759 /* PKFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4349E5187F884B629A94DEEDC9111C1 /* PKFileManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		44B6088D68B73A3575C0D48FE32A5FA7 /* UIColor+PK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDE576F1C3636A6C2FC6D74C9C7293E /* UIColor+PK.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -76,18 +78,20 @@
 		1FDE576F1C3636A6C2FC6D74C9C7293E /* UIColor+PK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+PK.h"; sourceTree = "<group>"; };
 		314AA7A0815BE4FE5B5830CDA560E0E9 /* Pods-BevaBaseKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BevaBaseKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		35C98838DC1CDACB9797E70537AEE90E /* PKViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKViewController.h; sourceTree = "<group>"; };
+		3D85E1EE2465586A007FCE16 /* PKKeychainItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKKeychainItem.h; sourceTree = "<group>"; };
+		3D85E1EF2465586A007FCE16 /* PKKeychainItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKKeychainItem.m; sourceTree = "<group>"; };
 		3FDB31D14BCACECAD8BB95574106DAA4 /* PKFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKFileManager.m; sourceTree = "<group>"; };
 		42BF14E75AD86905B133A425DBDB7975 /* PKBundleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKBundleManager.h; sourceTree = "<group>"; };
 		42C9EEF4AF92989F1FE61EE2E643BB83 /* PKAdaptScreenEdgePanScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKAdaptScreenEdgePanScrollView.h; sourceTree = "<group>"; };
 		4DFEFE5E12D9BFDDDC687730CDEF0C40 /* PKCustomNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKCustomNavigationController.h; sourceTree = "<group>"; };
-		523DA70F09AD9A7F2D0265CB72F68A8C /* libPods-BevaBaseKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BevaBaseKit_Example.a"; path = "libPods-BevaBaseKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		538694E1DBCD400C15AC9AC976E95997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		523DA70F09AD9A7F2D0265CB72F68A8C /* libPods-BevaBaseKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BevaBaseKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		538694E1DBCD400C15AC9AC976E95997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		552B72D65A09C817EB3B0ACD8E256C37 /* Pods-BevaBaseKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BevaBaseKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5787B3242492142A76AC8D2A36F70F5C /* BevaBaseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BevaBaseKit.debug.xcconfig; sourceTree = "<group>"; };
 		59327E6DD5E237A25EB7AE23FE419FCA /* Pods-BevaBaseKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BevaBaseKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		5E117DD02F83A60ABECD22C33320E704 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5E117DD02F83A60ABECD22C33320E704 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		615D213E86ECCB8200F03ACB0461DD43 /* BevaBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BevaBaseKit-dummy.m"; sourceTree = "<group>"; };
-		7848FF96FEFA1B5914F4A370EFD8C3D6 /* BevaBaseKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BevaBaseKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7848FF96FEFA1B5914F4A370EFD8C3D6 /* BevaBaseKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BevaBaseKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		89147A171A94E09871ACEF70353A6C0B /* Pods-BevaBaseKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BevaBaseKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8AD481C3DA2F0B9DD900AE5D9A78BDA3 /* PKCustomNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKCustomNavigationController.m; sourceTree = "<group>"; };
 		8CC635E0F0BA2411E0BCC3A0C7C9DAD1 /* PKDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKDevice.m; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 		961F737150F33373E72B36ACE697DE94 /* BevaBaseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BevaBaseKit.release.xcconfig; sourceTree = "<group>"; };
 		96289305C6DF90995FD4F24E4DC8C149 /* UIView+PK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+PK.h"; sourceTree = "<group>"; };
 		9A43D3728968FCA50E836E47EBACCC84 /* NSString+PK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+PK.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4349E5187F884B629A94DEEDC9111C1 /* PKFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKFileManager.h; sourceTree = "<group>"; };
 		A7C4A5D51AE86FD8289E83F886FD4469 /* PKAdaptScreenEdgePanCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKAdaptScreenEdgePanCollectionView.h; sourceTree = "<group>"; };
 		AB3F1F7CEE7E06CFCACDAC69C7514905 /* Pods-BevaBaseKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BevaBaseKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -108,16 +112,16 @@
 		BB4DA2AD896699DBB407ED3512571690 /* PKAdaptScreenEdgePanCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKAdaptScreenEdgePanCollectionView.m; sourceTree = "<group>"; };
 		C6227BED7A97DCEF0F0292C6C77AFE41 /* PKButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKButton.h; sourceTree = "<group>"; };
 		C96E57879C84A9FC614E9B2C2D5AD8E4 /* PKPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKPlayer.h; sourceTree = "<group>"; };
-		D1A4DD665C099EA9C60ABE7D0E62D0BA /* libPods-BevaBaseKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BevaBaseKit_Tests.a"; path = "libPods-BevaBaseKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A4DD665C099EA9C60ABE7D0E62D0BA /* libPods-BevaBaseKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BevaBaseKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4524909FC8D9BCA2DECC7A7CC383B26 /* UIImage+PK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PK.m"; sourceTree = "<group>"; };
 		D49F902D188BF48A9C5DD3F4122DA223 /* PKDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKDevice.h; sourceTree = "<group>"; };
 		DA84338EC1C7662FE2938CF803428458 /* PKAdaptScreenEdgePanScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKAdaptScreenEdgePanScrollView.m; sourceTree = "<group>"; };
 		E275CE97F7D3BEF1CBEF08F44D004299 /* BevaBaseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BevaBaseKit-prefix.pch"; sourceTree = "<group>"; };
 		E3820F2C7EC9B511EEB4303C509EE060 /* PKBundleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PKBundleManager.m; sourceTree = "<group>"; };
-		E64862BB6613EEE7279F0C6D98372637 /* libBevaBaseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBevaBaseKit.a; path = libBevaBaseKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64862BB6613EEE7279F0C6D98372637 /* libBevaBaseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBevaBaseKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C05A4DABBE6637252A6F5676C50FAF /* NSURL+PK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURL+PK.m"; sourceTree = "<group>"; };
 		F3270911CF66A83C6784159A6FE2F1EA /* UIImage+PK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+PK.h"; sourceTree = "<group>"; };
-		F523AB39772F719DBAFB3FF9B7943641 /* BevaBaseKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BevaBaseKit.bundle; path = "BevaBaseKit-BevaBaseKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F523AB39772F719DBAFB3FF9B7943641 /* BevaBaseKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BevaBaseKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F562240C5A03766BEC5A3D848C01301B /* pk_machine_model_pairs.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = pk_machine_model_pairs.plist; path = BevaBaseKit/Resources/pk_machine_model_pairs.plist; sourceTree = "<group>"; };
 		F6754BA8E076C6014C83F93F410A5F57 /* Pods-BevaBaseKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BevaBaseKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FA46D00F392B7CF672F3B80302FEE173 /* Pods-BevaBaseKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BevaBaseKit_Example-dummy.m"; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				8CC635E0F0BA2411E0BCC3A0C7C9DAD1 /* PKDevice.m */,
 				A4349E5187F884B629A94DEEDC9111C1 /* PKFileManager.h */,
 				3FDB31D14BCACECAD8BB95574106DAA4 /* PKFileManager.m */,
+				3D85E1EE2465586A007FCE16 /* PKKeychainItem.h */,
+				3D85E1EF2465586A007FCE16 /* PKKeychainItem.m */,
 			);
 			name = foundation;
 			path = BevaBaseKit/Classes/foundation;
@@ -345,6 +351,7 @@
 				4174AD6B3417EBC2A3F7B35DB25F0759 /* PKFileManager.h in Headers */,
 				DB2F54B9FA85AD5377E3DB94559F5D74 /* PKPlayer.h in Headers */,
 				224D8D85274DA5BBF13AEBE2F0BB6D40 /* PKViewController.h in Headers */,
+				3D85E1F02465586A007FCE16 /* PKKeychainItem.h in Headers */,
 				44B6088D68B73A3575C0D48FE32A5FA7 /* UIColor+PK.h in Headers */,
 				3AEC210D07F109A969B006E1877ECCD6 /* UIImage+PK.h in Headers */,
 				8B401DCD164AA742BE4AC793941443D1 /* UIView+PK.h in Headers */,
@@ -509,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56330AD93C951BA8E827EE06F168B10 /* BevaBaseKit-dummy.m in Sources */,
+				3D85E1F12465586A007FCE16 /* PKKeychainItem.m in Sources */,
 				0C4FC5B7D7C43F6CCEEEC006D5CDB149 /* NSString+PK.m in Sources */,
 				6465ECC05C1DEC96E9CCAF906EC68887 /* NSURL+PK.m in Sources */,
 				EF249C3CADD73362119CB59E5C3405A9 /* PKAdaptScreenEdgePanCollectionView.m in Sources */,
@@ -624,8 +632,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
