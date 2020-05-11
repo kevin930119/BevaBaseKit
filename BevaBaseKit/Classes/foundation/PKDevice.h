@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define kPKDeviceNavigationBarHeight    [[PKDevice currentDevice] navigationBarHeight]
 #define kPKDeviceStatusBarHeight    ([PKDevice currentDevice].isIphoneX?44:20)
 #define kPKDeviceTabBarHeight   ([PKDevice currentDevice].isIphoneX?(49+34):49)
-#define kPKDeviceTopSafeHeight  ([PKDevice currentDevice].isIphoneX?44:0)
-#define kPKDeviceBottomSafeHeight  ([PKDevice currentDevice].isIphoneX?34:0)
+#define kPKDeviceTopSafeHeight  ([PKDevice currentDevice].isIphoneX?44:20)
+#define kPKDeviceBottomSafeHeight  ([PKDevice currentDevice].isIphoneX?34:([PKDevice currentDevice].isIpadFullScreen?20:0))
 
 @interface PKDevice : NSObject
 
@@ -29,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
  是否为x
  */
 @property (nonatomic, assign, readonly) BOOL isIphoneX;
+
+/**
+ 是否为iPad全面屏
+ */
+@property (nonatomic, assign, readonly) BOOL isIpadFullScreen;
 
 /**
  最大屏幕长度

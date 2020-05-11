@@ -31,6 +31,9 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 @property (nonatomic, copy, nullable) NSString *appBuild;
 @property (nonatomic, copy, nullable) NSString *appFullVersion;
 
+@property (nonatomic, assign) BOOL isIpadFullScreen;
+@property (nonatomic, assign) BOOL alreadyKnowIpadFullScreen;
+
 @end
 
 @implementation PKDevice
@@ -61,6 +64,29 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
         return YES;
     }
     return NO;
+}
+
+- (BOOL)isIpadFullScreen {
+    if (!self.isPad) {
+        return NO;
+    }
+    
+    if (self.alreadyKnowIpadFullScreen) {
+        return _isIpadFullScreen;
+    }
+    
+    if (@available(iOS 11.0, *)) {
+        if ([UIApplication sharedApplication].delegate.window.safeAreaInsets.bottom > 0) {
+            _isIpadFullScreen = YES;
+        } else {
+            _isIpadFullScreen = NO;
+        }
+    } else {
+        _isIpadFullScreen = NO;
+    }
+    self.alreadyKnowIpadFullScreen = YES;
+    
+    return _isIpadFullScreen;
 }
 
 - (float)maxLengthOfScreen {
