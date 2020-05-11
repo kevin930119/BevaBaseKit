@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define kPKDeviceScreenHeight   [UIScreen mainScreen].bounds.size.height
 #define kPKDeviceNavigationBarHeight    [[PKDevice currentDevice] navigationBarHeight]
 #define kPKDeviceStatusBarHeight    ([PKDevice currentDevice].isIphoneX?44:20)
-#define kPKDeviceTabBarHeight   ([PKDevice currentDevice].isIphoneX?(49+34):49)
+#define kPKDeviceTabBarHeight   ([PKDevice currentDevice].isIphoneX?(49+34):([PKDevice currentDevice].isIpadFullScreen?(49+20):49))
 #define kPKDeviceTopSafeHeight  ([PKDevice currentDevice].isIphoneX?44:20)
 #define kPKDeviceBottomSafeHeight  ([PKDevice currentDevice].isIphoneX?34:([PKDevice currentDevice].isIpadFullScreen?20:0))
 
