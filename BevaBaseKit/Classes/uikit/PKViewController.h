@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) BOOL pk_prefersNavigationBarHidden;
 
+/**
+ 当前视图是否正在展示
+ */
+@property (nonatomic, assign, readonly) BOOL pk_viewVisible;
+
 @end
 
 @interface PKViewController (NavigationController)

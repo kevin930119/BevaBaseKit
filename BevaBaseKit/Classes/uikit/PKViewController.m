@@ -15,6 +15,8 @@
 
 @interface PKViewController ()
 
+@property (nonatomic, assign) BOOL pk_viewVisible;
+
 @property (nonatomic, strong) UIView *pk_fakeNavigationBar;
 @property (nonatomic, strong) UIView *pk_fakeNavigationBarShadowLine;
 @property (nonatomic, assign) BOOL pk_isViewDidApear;
@@ -32,8 +34,15 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.pk_isViewDidApear = YES;
+    self.pk_viewVisible = YES;
     // 更新导航栏
     [self setNeedsUpdateOfPKNavigationBar];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    self.pk_viewVisible = NO;
 }
 
 #pragma mark - Configs
