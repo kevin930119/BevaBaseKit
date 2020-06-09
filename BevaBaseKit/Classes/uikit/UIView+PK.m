@@ -78,4 +78,26 @@
     [self.layer addAnimation:groupAnimation forKey:@"pk_fade_out"];
 }
 
+- (void)shakeTraverse:(CGFloat)t {
+    if (t == 0) {
+        t = 4;
+    }
+    CGFloat duration = 0.07*t/4.0;
+    CGFloat duration2 = duration/3.0*2.0;
+    
+    CGAffineTransform translateRight = CGAffineTransformMakeTranslation(t, 0);
+    CGAffineTransform translateLeft = CGAffineTransformMakeTranslation(-t, 0);
+    
+    self.transform = translateLeft;
+    
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:2];
+        self.transform = translateRight;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:duration2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            self.transform = CGAffineTransformIdentity;
+        } completion:nil];
+    }];
+}
+
 @end

@@ -28,6 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)fadeOutUsingScaleWithDuration:(CGFloat)duration delegate:(nullable id<CAAnimationDelegate>)delegate;
 
+/**
+ 横移震动
+ 
+ @param t 横移幅度，传0，默认为4个像素
+ */
+- (void)shakeTraverse:(CGFloat)t;
+
 @end
 
 NS_ASSUME_NONNULL_END
