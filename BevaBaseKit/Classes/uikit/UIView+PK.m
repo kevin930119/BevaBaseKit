@@ -82,8 +82,8 @@
     if (t == 0) {
         t = 4;
     }
-    CGFloat duration = 0.07*t/4.0;
-    CGFloat duration2 = duration/3.0*2.0;
+    CGFloat duration = 0.07;
+    CGFloat duration2 = 0.05;
     
     CGAffineTransform translateRight = CGAffineTransformMakeTranslation(t, 0);
     CGAffineTransform translateLeft = CGAffineTransformMakeTranslation(-t, 0);
