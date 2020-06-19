@@ -53,6 +53,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger pk_offetForHeadspace;
 
 /**
+ 是否自动添加返回按钮，默认为YES
+ */
+@property (nonatomic, readonly) BOOL pk_addBackNavigationItemAutomatically ;
+
+/**
  * 以下属性请确保在控制器viewDidLoad里初始化
  */
 

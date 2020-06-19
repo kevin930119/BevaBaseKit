@@ -185,14 +185,18 @@
 
 #pragma mark - Private methods
 - (void)_addBackItemForViewController:(UIViewController *)viewController {
-    UIBarButtonItem *backItem = nil;
     if ([viewController isKindOfClass:[PKViewController class]]) {
         PKViewController *baseVC = (PKViewController *)viewController;
-        backItem = [[UIBarButtonItem alloc] initWithImage:self.pk_customBackNavigationItemImage style:UIBarButtonItemStylePlain target:baseVC action:@selector(customNavigationBarBackItemDidClick)];
+        if (!baseVC.pk_addBackNavigationItemAutomatically) {
+            // 不自动添加返回按钮
+            return;
+        }
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:self.pk_customBackNavigationItemImage style:UIBarButtonItemStylePlain target:baseVC action:@selector(customNavigationBarBackItemDidClick)];
+        viewController.navigationItem.leftBarButtonItem = backItem;
     } else {
-        backItem = [[UIBarButtonItem alloc] initWithImage:self.pk_customBackNavigationItemImage style:UIBarButtonItemStylePlain target:self action:@selector(_customBackItemClick)];
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:self.pk_customBackNavigationItemImage style:UIBarButtonItemStylePlain target:self action:@selector(_customBackItemClick)];
+        viewController.navigationItem.leftBarButtonItem = backItem;
     }
-    viewController.navigationItem.leftBarButtonItem = backItem;
 }
 
 - (void)_customBackItemClick {

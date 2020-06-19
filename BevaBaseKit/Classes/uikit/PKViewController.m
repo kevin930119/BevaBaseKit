@@ -157,6 +157,10 @@
     return kPKDeviceNavigationBarHeight + statusBarHeight;
 }
 
+- (BOOL)pk_addBackNavigationItemAutomatically {
+    return YES;
+}
+
 - (void)setPk_navigationBarColor:(UIColor *)pk_navigationBarColor {
     if (!pk_navigationBarColor) {
         pk_navigationBarColor = [UIColor clearColor];
