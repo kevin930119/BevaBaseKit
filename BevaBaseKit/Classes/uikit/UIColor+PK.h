@@ -17,35 +17,35 @@ NS_ASSUME_NONNULL_BEGIN
  通过十六进制字符串生成颜色
  
  @param hex 十六进制颜色，示例：@"0x000000",@"#000000",@"000000"
- @return 颜色（输入非法时为nil）
+ @return 颜色（输入非法时返回clear）
  */
-+ (nullable UIColor *)colorWithHexString:(NSString *)hex;
++ (UIColor *)colorWithHexString:(NSString *)hex;
 
 /**
  通过十六进制字符串以及透明度生成颜色
  
  @param hex 十六进制字符串，示例：@"0x000000",@"#000000",@"000000"
  @param alpha 透明度 0.0~1.0
- @return 颜色（输入非法时为nil）
+ @return 颜色（输入非法时返回clear）
  */
-+ (nullable UIColor *)colorWithHexString:(NSString *)hex alpha:(CGFloat)alpha;
++ (UIColor *)colorWithHexString:(NSString *)hex alpha:(CGFloat)alpha;
 
 /**
  通过十六进制数字生成颜色
  
  @param hex 十六进制数字，示例：0x000000
- @return 颜色（输入非法时为nil）
+ @return 颜色（输入非法时返回clear）
  */
-+ (nullable UIColor *)colorWithHexInt:(unsigned int)hex;
++ (UIColor *)colorWithHexInt:(unsigned int)hex;
 
 /**
  通过十六进制数字以及透明度生成颜色
  
  @param hex 十六进制数字，示例：0x000000
  @param alpha 透明度 0.0~1.0
- @return 颜色（输入非法时为nil）
+ @return 颜色（输入非法时返回clear）
  */
-+ (nullable UIColor *)colorWithHexInt:(unsigned int)hex alpha:(CGFloat)alpha;
++ (UIColor *)colorWithHexInt:(unsigned int)hex alpha:(CGFloat)alpha;
 
 #pragma mark - 适配iOS13的黑暗模式
 
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param darkColor 暗黑模式颜色
  @return 颜色
  */
-+ (nullable UIColor *)colorByUserInterfaceStyle:(UIColor *)lightColor darkColor:(nullable UIColor *)darkColor;
++ (UIColor *)colorByUserInterfaceStyle:(UIColor *)lightColor darkColor:(nullable UIColor *)darkColor;
 
 /**
 适配黑暗模式
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 @param darkHexInt 暗黑模式颜色
 @return 颜色
 */
-+ (nullable UIColor *)colorByUserInterfaceStyleUsingHexInt:(unsigned int)lightHexInt dark:(unsigned int)darkHexInt;
++ (UIColor *)colorByUserInterfaceStyleUsingHexInt:(unsigned int)lightHexInt dark:(unsigned int)darkHexInt;
 
 /**
 适配黑暗模式
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 @param darkHexString 暗黑模式颜色
 @return 颜色
 */
-+ (nullable UIColor *)colorByUserInterfaceStyleUsingHexString:(NSString *)lightHexString dark:(nullable NSString *)darkHexString;
++ (UIColor *)colorByUserInterfaceStyleUsingHexString:(NSString *)lightHexString dark:(nullable NSString *)darkHexString;
 
 @end
 

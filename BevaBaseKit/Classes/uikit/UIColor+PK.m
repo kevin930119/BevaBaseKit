@@ -15,23 +15,23 @@
 
 + (UIColor *)colorWithHexString:(NSString *)hex alpha:(CGFloat)alpha {
     if (![hex isKindOfClass:[NSString class]]) {
-        return nil;
+        return [UIColor clearColor];
     }
     
     NSString * hexString = nil;
     if ([hex hasPrefix:@"0x"]) {
         if (hex.length < 8) {
-            return nil;
+            return [UIColor clearColor];
         }
         hexString = [hex substringWithRange:NSMakeRange(2, 6)];
     } else if ([hex hasPrefix:@"#"]) {
         if (hex.length < 7) {
-            return nil;
+            return [UIColor clearColor];
         }
         hexString = [hex substringWithRange:NSMakeRange(1, 6)];
     } else {
         if (hex.length < 6) {
-            return nil;
+            return [UIColor clearColor];
         }
         hexString = hex;
     }
