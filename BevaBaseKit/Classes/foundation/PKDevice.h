@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL isIpadFullScreen;
 
 /**
+ 设备机型
+ */
+@property (nonatomic, copy, readonly) NSString *deviceModel;
+
+/**
  最大屏幕长度
  */
 @property (nonatomic, assign, readonly) float maxLengthOfScreen;

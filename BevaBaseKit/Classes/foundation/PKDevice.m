@@ -20,6 +20,7 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 
 @interface PKDevice ()
 
+@property (nonatomic, copy) NSString *deviceModel;
 @property (nonatomic, assign) float maxLengthOfScreen;
 @property (nonatomic, assign) float minLengthOfScreen;
 @property (nonatomic, copy, nullable) NSString *deviceIdentifier;
@@ -87,6 +88,16 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     self.alreadyKnowIpadFullScreen = YES;
     
     return _isIpadFullScreen;
+}
+
+- (NSString *)deviceModel {
+    if (!_deviceModel) {
+        struct utsname systemInfo;
+        uname(&systemInfo);
+        NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+        _deviceModel = deviceString;
+    }
+    return _deviceModel;
 }
 
 - (float)maxLengthOfScreen {
