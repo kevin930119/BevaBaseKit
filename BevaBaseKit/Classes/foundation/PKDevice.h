@@ -53,12 +53,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设备标识符(E621E1F8-C36C-495A-93FC-0C247A3E6E5F)
  */
-@property (nonatomic, copy, readonly, nullable) NSString *deviceIdentifier;
+@property (nonatomic, copy, readonly, nullable) NSString *bevaIdentifier;
 
 /**
  去除横杠的设备标识符(E621E1F8C36C495A93FC0C247A3E6E5F)
  */
-@property (nonatomic, copy, readonly, nullable) NSString *deviceIdentifierWithoutHyphen;
+@property (nonatomic, copy, readonly, nullable) NSString *bevaIdentifierWithoutHyphen;
 
 @property (nonatomic, copy, readonly, nonnull) NSString *UUID;
 
@@ -93,7 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param deviceID 设备id
  @return 合法返回YES
  */
-- (BOOL)isValidDeviceID:(NSString *)deviceID;
+- (BOOL)isValidBevaID:(NSString *)deviceID;
 
 /**
  导航栏高度

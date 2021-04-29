@@ -14,8 +14,8 @@
 #import "PKDevice.h"
 
 static NSString * const kPKClientKeychainAccountName = @"com.prokids.apps";
-static NSString * const kPKClientDeviceIDKeychainServiceName = @"device_id";
-static NSString * const kPKClientDeviceIDUserDefaultsKey = @"com.prokids.apps.device.id";
+static NSString * const kPKClientBevaIDKeychainServiceName = @"device_id";
+static NSString * const kPKClientBevaIDUserDefaultsKey = @"com.prokids.apps.device.id";
 static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$";
 
 @interface PKDevice ()
@@ -23,8 +23,8 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 @property (nonatomic, copy) NSString *deviceModel;
 @property (nonatomic, assign) float maxLengthOfScreen;
 @property (nonatomic, assign) float minLengthOfScreen;
-@property (nonatomic, copy, nullable) NSString *deviceIdentifier;
-@property (nonatomic, copy, nullable) NSString *deviceIdentifierWithoutHyphen;
+@property (nonatomic, copy, nullable) NSString *bevaIdentifier;
+@property (nonatomic, copy, nullable) NSString *bevaIdentifierWithoutHyphen;
 @property (nonatomic, copy, nonnull) NSString *UUID;
 @property (nonatomic, copy, nonnull) NSString *IDFV;
 @property (nonatomic, copy, nullable) NSString *appBundleIdentifier;
@@ -116,20 +116,20 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return _minLengthOfScreen;
 }
 
-- (NSString *)deviceIdentifier {
-    if (!_deviceIdentifier) {
-        _deviceIdentifier = [self _deviceIdentifierByCreating];
+- (NSString *)bevaIdentifier {
+    if (!_bevaIdentifier) {
+        _bevaIdentifier = [self _bevaIdentifierByCreating];
     }
-    return _deviceIdentifier;
+    return _bevaIdentifier;
 }
 
-- (NSString *)deviceIdentifierWithoutHyphen {
-    if (!_deviceIdentifierWithoutHyphen) {
-        NSString *deviceId = [self deviceIdentifier];
+- (NSString *)bevaIdentifierWithoutHyphen {
+    if (!_bevaIdentifierWithoutHyphen) {
+        NSString *deviceId = [self bevaIdentifier];
         // 移除"-"
-        _deviceIdentifierWithoutHyphen = [deviceId stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        _bevaIdentifierWithoutHyphen = [deviceId stringByReplacingOccurrencesOfString:@"-" withString:@""];
     }
-    return _deviceIdentifierWithoutHyphen;
+    return _bevaIdentifierWithoutHyphen;
 }
 
 - (NSString *)UUID {
@@ -176,7 +176,7 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return _appFullVersion;
 }
 
-- (BOOL)isValidDeviceID:(NSString *)deviceID {
+- (BOOL)isValidBevaID:(NSString *)deviceID {
     if (![deviceID isKindOfClass:[NSString class]]) {
         return NO;
     }
@@ -205,42 +205,42 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
 }
 
 #pragma mark - Private methods
-- (NSString *)_deviceIdentifierByCreating {
+- (NSString *)_bevaIdentifierByCreating {
     // 从钥匙串中读取
-    NSString *deviceIDStr = [self _deviceIDFromKeychain];
-    if ([self _isValidDeviceID:deviceIDStr]) {
+    NSString *deviceIDStr = [self _bevaIDFromKeychain];
+    if ([self _isValidBevaID:deviceIDStr]) {
         return deviceIDStr;
     }
     
     // 从user default中读取
-    deviceIDStr = [self _deviceIDFromUserDefaults];
-    if ([self _isValidDeviceID:deviceIDStr]) {
-        [self _saveDeviceIDToKeychain:deviceIDStr];
+    deviceIDStr = [self _bevaIDFromUserDefaults];
+    if ([self _isValidBevaID:deviceIDStr]) {
+        [self _saveBevaIDToKeychain:deviceIDStr];
         return deviceIDStr;
     }
     
     // 获取IDFV
     deviceIDStr = [self IDFV];
-    if ([self _isValidDeviceID:deviceIDStr]) {
+    if ([self _isValidBevaID:deviceIDStr]) {
         // 保存
-        [self _saveDeviceIDToKeychain:deviceIDStr];
-        [self _saveDeviceIDToUserDefaults:deviceIDStr];
+        [self _saveBevaIDToKeychain:deviceIDStr];
+        [self _saveBevaIDToUserDefaults:deviceIDStr];
         return deviceIDStr;
     }
     
     // 获取UUID
     deviceIDStr = [self UUID];
-    if ([self _isValidDeviceID:deviceIDStr]) {
+    if ([self _isValidBevaID:deviceIDStr]) {
         // 保存
-        [self _saveDeviceIDToKeychain:deviceIDStr];
-        [self _saveDeviceIDToUserDefaults:deviceIDStr];
+        [self _saveBevaIDToKeychain:deviceIDStr];
+        [self _saveBevaIDToUserDefaults:deviceIDStr];
         return deviceIDStr;
     }
     
     return nil;
 }
 
-- (NSString *)_deviceIDFromKeychain {
+- (NSString *)_bevaIDFromKeychain {
     NSString *classKey = (__bridge NSString *)kSecClass;
     NSString *classValue = (__bridge NSString *)kSecClassGenericPassword;
     NSString *accessibleKey = (__bridge NSString *)kSecAttrAccessible;
@@ -248,7 +248,7 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     NSString *accountKey = (__bridge NSString *)kSecAttrAccount;
     NSString *accountValue = kPKClientKeychainAccountName;
     NSString *serviceKey = (__bridge NSString *)kSecAttrService;
-    NSString *serviceValue = kPKClientDeviceIDKeychainServiceName;
+    NSString *serviceValue = kPKClientBevaIDKeychainServiceName;
     NSString *rtnDataKey = (__bridge NSString *)kSecReturnData;
     NSString *rtnDataValue = (__bridge id)kCFBooleanTrue;
     NSString *rtnAttrsKey = (__bridge NSString *)kSecReturnAttributes;
@@ -274,12 +274,12 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     return str;
 }
 
-- (NSString *) _deviceIDFromUserDefaults {
+- (NSString *)_bevaIDFromUserDefaults {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    return [ud objectForKey:kPKClientDeviceIDUserDefaultsKey];
+    return [ud objectForKey:kPKClientBevaIDUserDefaultsKey];
 }
 
-- (void)_saveDeviceIDToKeychain:(NSString *)deviceID {
+- (void)_saveBevaIDToKeychain:(NSString *)deviceID {
     NSString *classKey = (__bridge NSString *)kSecClass;
     NSString *classValue = (__bridge NSString *)kSecClassGenericPassword;
     NSString *accessibleKey = (__bridge NSString *)kSecAttrAccessible;
@@ -287,19 +287,19 @@ static NSString * const kPKClientUUIDPattern = @"^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-
     NSString *accountKey = (__bridge NSString *)kSecAttrAccount;
     NSString *accountValue = kPKClientKeychainAccountName;
     NSString *serviceKey = (__bridge NSString *)kSecAttrService;
-    NSString *serviceValue = kPKClientDeviceIDKeychainServiceName;
+    NSString *serviceValue = kPKClientBevaIDKeychainServiceName;
     NSString *valueDataKey = (__bridge NSString *)kSecValueData;
     NSData *data = [deviceID dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *keychainItems = @{classKey : classValue, accessibleKey : accessibleValue, accountKey : accountValue, serviceKey : serviceValue, valueDataKey : data};
     SecItemAdd((__bridge CFDictionaryRef)keychainItems, NULL);
 }
 
-- (void)_saveDeviceIDToUserDefaults:(NSString *)deviceID {
+- (void)_saveBevaIDToUserDefaults:(NSString *)deviceID {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setObject:deviceID forKey:kPKClientDeviceIDUserDefaultsKey];
+    [ud setObject:deviceID forKey:kPKClientBevaIDUserDefaultsKey];
 }
 
-- (BOOL)_isValidDeviceID:(NSString *)deviceID {
+- (BOOL)_isValidBevaID:(NSString *)deviceID {
     if (![deviceID isKindOfClass:[NSString class]]) {
         return NO;
     }
