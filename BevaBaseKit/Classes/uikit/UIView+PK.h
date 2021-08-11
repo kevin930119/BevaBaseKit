@@ -68,6 +68,13 @@ typedef NS_ENUM(NSInteger, PKViewTransitionCurve) {
 - (void)shakeTraverse:(CGFloat)t;
 
 /**
+ 上下震动
+ 
+ @param t 横移幅度，传0，默认为4个像素
+ */
+- (void)shakeTraverseUpDown:(CGFloat)t;
+
+/**
  执行一个视图过渡动画
  self 执行动画的对象
  fromView 执行动画前的子视图

@@ -100,6 +100,28 @@
     }];
 }
 
+- (void)shakeTraverseUpDown:(CGFloat)t {
+    if (t == 0) {
+        t = 4;
+    }
+    CGFloat duration = 0.20;
+//    CGFloat duration2 = 0.20;
+    
+    CGAffineTransform translateUp = CGAffineTransformMakeTranslation(0, t);
+    CGAffineTransform translatedDown = CGAffineTransformMakeTranslation(0, -t);
+    
+    self.transform = translateUp;
+    
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:2];
+        self.transform = translatedDown;
+    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:duration2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//            self.transform = CGAffineTransformIdentity;
+//        } completion:nil];
+    }];
+}
+
 - (void)addLayerTransition:(PKViewTransitionType)type subType:(PKViewTransitionSubType)subType curve:(PKViewTransitionCurve)curve duration:(CGFloat)duration delegate:(nullable id<CAAnimationDelegate>)delegate {
     // 创建动画
     NSString *key = @"transition";

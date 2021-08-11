@@ -11,7 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (PK)
 
+/**
+ 获取一张纯色图片
+ */
 + (UIImage *)pureColorImageWithColor:(UIColor *)color size:(CGSize)size;
+
+/**
+ 对图片进行圆角处理
+ */
++ (UIImage *)createRoundedRectImage:(UIImage*)image size:(CGSize)size radius:(NSInteger)r;
 
 @end
 
